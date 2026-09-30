@@ -1,10 +1,13 @@
 import { createRoot } from "react-dom/client";
 
-import MySection from "./MySection";
-import MyButton from "./MyButton";
+const enabled = true;
+const text = "A Button";
+const placeholder = "input value...";
+const size = 50;
 
 createRoot(document.getElementById("root")).render(
-  <MySection>
-    <MyButton>My Button Text</MyButton>
-  </MySection>
-); 
+  <section>
+    <button disabled={!enabled}>{text}</button>
+    <input placeholder={placeholder} size={size} />
+  </section>
+);
