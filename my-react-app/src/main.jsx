@@ -1,7 +1,12 @@
 import { createRoot } from "react-dom/client";
 
+import { createElement } from "react";
+
 createRoot(document.getElementById("root")).render(
-  <p>
-    Hello, <strong>JSX</strong>
-  </p>
+  createElement(
+    "p",
+    null,
+    "Hello, ",
+    createElement("strong", null, "JSX")
+  )
 ); 
