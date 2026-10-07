@@ -1,7 +1,9 @@
+import Greeting from './Greeting';
+
 function App() {
   return (
     <div>
-      <h1>Hello, TypeScript!</h1>
+      <Greeting name="TypeScript" />
     </div>
   );
 }
