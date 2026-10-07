@@ -2,6 +2,7 @@ import Greeting from './Greeting';
 import UserCard from './UserCard';
 import Button from './Button';
 import Counter from './Counter';
+import InputField from './InputField';
 
 function App() {
   return (
@@ -11,6 +12,7 @@ function App() {
       <Button>Click me!</Button>
       <Button disabled>Don't click me!</Button>
       <Counter />
+      <InputField />
     </div>
   );
 }
