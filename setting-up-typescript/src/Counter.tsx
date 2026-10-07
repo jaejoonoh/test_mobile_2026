@@ -3,8 +3,10 @@ const Counter = () => {
 
     return (
         <div>
-            // Display the current count
-            // Button to increment the count
+            <p>Count: {count}</p>
+            <button>
+                Increment
+            </button>            
         </div>
 
     );
