@@ -9,7 +9,7 @@ function App() {
   useEffect(() => {
     setLoading(true);
 
-    fetch("https://api.github.com/users/sakhnyuk")
+    fetch("https://api.github.com/users/jaejoonoh")
       .then((response) => response.json())
       .then((data) => setUser(data))
       .catch((error) => console.log(error))
