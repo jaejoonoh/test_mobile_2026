@@ -2,13 +2,14 @@ import { StyleSheet } from "react-native";
 
 export default StyleSheet.create({
   container: {
-    flex: 1, flexDirection: "column",
-    //alignItems: "center", 
+    flex: 1, 
+    flexDirection: "row",
+    alignItems: "center", 
     justifyContent: "space-around",
     backgroundColor: "ghostwhite",
   },
   box: {
-    height: 100,
+    width: 100,
     alignSelf: "stretch",
     justifyContent: "center", alignItems: "center",
     backgroundColor: "lightgray",
