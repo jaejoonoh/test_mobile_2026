@@ -6,13 +6,19 @@ import styles from "./styles";
 
 type Props = NativeStackScreenProps<RootStackParamList, "Details">;
 
-export default function Details ({ route }: Props) {
-    const { title } = route.params;
+export default function Details ({ route, navigation }: Props) {
+    const { content, title } = route.params;
+
+    React.useEffect(() =>{
+        navigation.setOptions({
+            title: title,
+        });
+    }, [navigation, title]);
 
     return (
         <View style={styles.container}>
             <StatusBar barStyle="dark-content" />
-            <Text>{title}</Text>
+            <Text>{content}</Text>
         </View>
     );
 }
