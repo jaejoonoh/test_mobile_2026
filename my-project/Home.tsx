@@ -1,17 +1,24 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+
+import { StyleSheet, Text, View, StatusBar, Button } from 'react-native';
 import styles from './styles';
 import Box from './Box';
 import Row from './Row';
 import Column from './Column';
 
-export default function Home() {
+import {NativeStackScreenProps} from '@react-navigation/native-stack';
+import {RootStackParamList} from './router';
+
+type Props = NativeStackScreenProps<RootStackParamList>;
+
+export default function Home( { navigation }: Props ) {
   return (
     <View style={styles.container}>
-      <Row>
-        <Column><Box>#1</Box><Box>#2</Box></Column>
-        <Column><Box>#3</Box><Box>#4</Box></Column>
-      </Row>
+      <StatusBar barStyle="dark-content" />
+      <Text>Home Screen</Text>
+      <Button
+        title="Go to Settings"
+        onPress={() => navigation.navigate('Settings')}
+      />
     </View>
   );
 }
