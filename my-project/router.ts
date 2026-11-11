@@ -3,3 +3,9 @@ export type RootStackParamList = {
   Settings: undefined;
   Details: { title: string; stock: number; content: string  };
 };
+
+export type Routes = {
+  Home: undefined;
+  News: undefined;
+  Settings: undefined;
+};
