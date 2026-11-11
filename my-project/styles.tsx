@@ -28,4 +28,12 @@ export default StyleSheet.create({
     justifyContent: "space-around",
     alignSelf: "stretch",
   },
+  
+  item: {
+    margin: 5,
+    padding: 5,
+    color: "slategrey",
+    backgroundColor: "ghostwhite",
+    textAlign: "center",
+  },
 });

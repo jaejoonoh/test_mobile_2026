@@ -5,6 +5,7 @@ import Home from './Home';
 import Settings from './Settings';
 import Details from './Details';
 import News from './News';
+import RenderingDataCollection from './screens/RenderingDataCollection';
 import { Button, Platform } from 'react-native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { createDrawerNavigator } from '@react-navigation/drawer';
@@ -18,18 +19,20 @@ const Drawer = createDrawerNavigator<Routes>();
 export default function App() {
   return (
     <NavigationContainer>
-      {Platform.OS === 'android' && (
+      {Platform.OS === 'ios' && (
         <Tab.Navigator>
           <Tab.Screen name="Home" component={Home} />
           <Tab.Screen name="News" component={News} />
           <Tab.Screen name="Settings" component={Settings} />
+          <Tab.Screen name="RenderingDataCollection" component={RenderingDataCollection} />
         </Tab.Navigator>
       )}
-      {Platform.OS === 'ios' && (
+      {Platform.OS === 'android' && (
         <Drawer.Navigator>
           <Drawer.Screen name="Home" component={Home} />
           <Drawer.Screen name="News" component={News} />
           <Drawer.Screen name="Settings" component={Settings} />
+          <Drawer.Screen name="RenderingDataCollection" component={RenderingDataCollection} />
         </Drawer.Navigator>
       )}
     </NavigationContainer>
