@@ -50,4 +50,9 @@ export default StyleSheet.create({
     padding: 10,
     backgroundColor: "white",
   },
+
+  label: {
+    textAlign: "center",
+    margin: 10,
+  },
 });
