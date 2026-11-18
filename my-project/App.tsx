@@ -10,9 +10,11 @@ import ListContainer from './ListContainer/ListContainer';
 import WhereAmI from './GeoLocation/WhereAmI';
 import WhatsAroundMe from './GeoLocation/WhatsAroundMe';
 import PlottingPoint from './GeoLocation/PlottingPoint';
+import PlottingOverlays from './GeoLocation/PlottingOverlays';
 import { Button, Platform } from 'react-native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { createDrawerNavigator } from '@react-navigation/drawer';
+
 
 const boxes = new Array(10).fill(null).map((v, i)=> i+1);
 
@@ -33,6 +35,7 @@ export default function App() {
           <Tab.Screen name="WhereAmI" component={WhereAmI} />
           <Tab.Screen name="WhatsAroundMe" component={WhatsAroundMe} />
           <Tab.Screen name="PlottingPoint" component={PlottingPoint} />
+          <Tab.Screen name="PlottingOverlays" component={PlottingOverlays} />
         </Tab.Navigator>
       )}
       {Platform.OS === 'android' && (
@@ -45,6 +48,7 @@ export default function App() {
           <Drawer.Screen name="WhereAmI" component={WhereAmI} />
           <Drawer.Screen name="WhatsAroundMe" component={WhatsAroundMe} />
           <Drawer.Screen name="PlottingPoint" component={PlottingPoint} />
+          <Drawer.Screen name="PlottingOverlays" component={PlottingOverlays} />
         </Drawer.Navigator>
       )}
     </NavigationContainer>
