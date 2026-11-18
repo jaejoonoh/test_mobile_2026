@@ -14,4 +14,5 @@ export type Routes = {
   WhatsAroundMe: undefined;
   PlottingPoint: undefined;
   PlottingOverlays: undefined;
+  WeatherAroundMe: undefined;
 };

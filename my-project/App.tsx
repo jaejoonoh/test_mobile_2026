@@ -11,6 +11,7 @@ import WhereAmI from './GeoLocation/WhereAmI';
 import WhatsAroundMe from './GeoLocation/WhatsAroundMe';
 import PlottingPoint from './GeoLocation/PlottingPoint';
 import PlottingOverlays from './GeoLocation/PlottingOverlays';
+import WeatherAroundMe from './GeoLocation/WeatherAroundMe';
 import { Button, Platform } from 'react-native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { createDrawerNavigator } from '@react-navigation/drawer';
@@ -36,6 +37,7 @@ export default function App() {
           <Tab.Screen name="WhatsAroundMe" component={WhatsAroundMe} />
           <Tab.Screen name="PlottingPoint" component={PlottingPoint} />
           <Tab.Screen name="PlottingOverlays" component={PlottingOverlays} />
+          <Tab.Screen name="WeatherAroundMe" component={WeatherAroundMe} />
         </Tab.Navigator>
       )}
       {Platform.OS === 'android' && (
@@ -49,6 +51,7 @@ export default function App() {
           <Drawer.Screen name="WhatsAroundMe" component={WhatsAroundMe} />
           <Drawer.Screen name="PlottingPoint" component={PlottingPoint} />
           <Drawer.Screen name="PlottingOverlays" component={PlottingOverlays} />
+          <Drawer.Screen name="WeatherAroundMe" component={WeatherAroundMe} />
         </Drawer.Navigator>
       )}
     </NavigationContainer>
