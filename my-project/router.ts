@@ -12,4 +12,5 @@ export type Routes = {
   ListContainer: undefined;
   WhereAmI: undefined;
   WhatsAroundMe: undefined;
+  PlottingPoint: undefined;
 };
