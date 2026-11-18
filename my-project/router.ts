@@ -9,4 +9,5 @@ export type Routes = {
   News: undefined;
   Settings: undefined;
   RenderingDataCollection: undefined;
+  ListContainer: undefined;
 };
