@@ -55,4 +55,10 @@ export default StyleSheet.create({
     textAlign: "center",
     margin: 10,
   },
+
+  mapView: {
+    alignSelf: "stretch",
+    height: 450,
+    margin: 30,
+  },
 });

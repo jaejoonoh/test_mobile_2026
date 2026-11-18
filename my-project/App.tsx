@@ -8,6 +8,7 @@ import News from './News';
 import RenderingDataCollection from './screens/RenderingDataCollection';
 import ListContainer from './ListContainer/ListContainer';
 import WhereAmI from './GeoLocation/WhereAmI';
+import WhatsAroundMe from './GeoLocation/WhatsAroundMe';
 import { Button, Platform } from 'react-native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { createDrawerNavigator } from '@react-navigation/drawer';
@@ -29,6 +30,7 @@ export default function App() {
           <Tab.Screen name="RenderingDataCollection" component={RenderingDataCollection} />
           <Tab.Screen name="ListContainer" component={ListContainer} />
           <Tab.Screen name="WhereAmI" component={WhereAmI} />
+          <Tab.Screen name="WhatsAroundMe" component={WhatsAroundMe} />
         </Tab.Navigator>
       )}
       {Platform.OS === 'android' && (
@@ -39,6 +41,7 @@ export default function App() {
           <Drawer.Screen name="RenderingDataCollection" component={RenderingDataCollection} />
           <Drawer.Screen name="ListContainer" component={ListContainer} />
           <Drawer.Screen name="WhereAmI" component={WhereAmI} />
+          <Drawer.Screen name="WhatsAroundMe" component={WhatsAroundMe} />
         </Drawer.Navigator>
       )}
     </NavigationContainer>
