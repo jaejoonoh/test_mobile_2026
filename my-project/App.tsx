@@ -7,6 +7,7 @@ import Details from './Details';
 import News from './News';
 import RenderingDataCollection from './screens/RenderingDataCollection';
 import ListContainer from './ListContainer/ListContainer';
+import WhereAmI from './GeoLocation/WhereAmI';
 import { Button, Platform } from 'react-native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { createDrawerNavigator } from '@react-navigation/drawer';
@@ -27,6 +28,7 @@ export default function App() {
           <Tab.Screen name="Settings" component={Settings} />
           <Tab.Screen name="RenderingDataCollection" component={RenderingDataCollection} />
           <Tab.Screen name="ListContainer" component={ListContainer} />
+          <Tab.Screen name="WhereAmI" component={WhereAmI} />
         </Tab.Navigator>
       )}
       {Platform.OS === 'android' && (
@@ -36,6 +38,7 @@ export default function App() {
           <Drawer.Screen name="Settings" component={Settings} />
           <Drawer.Screen name="RenderingDataCollection" component={RenderingDataCollection} />
           <Drawer.Screen name="ListContainer" component={ListContainer} />
+          <Drawer.Screen name="WhereAmI" component={WhereAmI} />
         </Drawer.Navigator>
       )}
     </NavigationContainer>

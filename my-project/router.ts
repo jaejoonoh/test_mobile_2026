@@ -10,4 +10,5 @@ export type Routes = {
   Settings: undefined;
   RenderingDataCollection: undefined;
   ListContainer: undefined;
+  WhereAmI: undefined;
 };
