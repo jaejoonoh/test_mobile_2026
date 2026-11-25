@@ -12,6 +12,7 @@ import WhatsAroundMe from './GeoLocation/WhatsAroundMe';
 import PlottingPoint from './GeoLocation/PlottingPoint';
 import PlottingOverlays from './GeoLocation/PlottingOverlays';
 import WeatherAroundMe from './GeoLocation/WeatherAroundMe';
+import CollectingTextInput from './CollectingTextInput';
 import { Button, Platform } from 'react-native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { createDrawerNavigator } from '@react-navigation/drawer';
@@ -52,6 +53,7 @@ export default function App() {
           <Drawer.Screen name="PlottingPoint" component={PlottingPoint} />
           <Drawer.Screen name="PlottingOverlays" component={PlottingOverlays} />
           <Drawer.Screen name="WeatherAroundMe" component={WeatherAroundMe} />
+          <Drawer.Screen name="CollectingTextInput" component={CollectingTextInput} />
         </Drawer.Navigator>
       )}
     </NavigationContainer>

@@ -15,4 +15,5 @@ export type Routes = {
   PlottingPoint: undefined;
   PlottingOverlays: undefined;
   WeatherAroundMe: undefined;
+  CollectingTextInput: undefined;
 };
