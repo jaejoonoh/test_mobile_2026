@@ -17,6 +17,8 @@ import { Button, Platform } from 'react-native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { createDrawerNavigator } from '@react-navigation/drawer';
 import SelectingOptions from './SelectingOptions';
+import TogglingOnAndOff from './TogglingOnAndOff';
+import CollectingDateTimeInput from './CollectingDateTimeInput';
 
 
 const boxes = new Array(10).fill(null).map((v, i)=> i+1);
@@ -56,6 +58,8 @@ export default function App() {
           <Drawer.Screen name="WeatherAroundMe" component={WeatherAroundMe} />
           <Drawer.Screen name="CollectingTextInput" component={CollectingTextInput} />
           <Drawer.Screen name="SelectingOptions" component={SelectingOptions} />
+          <Drawer.Screen name="TogglingOnAndOff" component={TogglingOnAndOff} />
+          <Drawer.Screen name="CollectingDateTimeInput" component={CollectingDateTimeInput} />
         </Drawer.Navigator>
       )}
     </NavigationContainer>

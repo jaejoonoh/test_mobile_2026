@@ -125,4 +125,14 @@ export default StyleSheet.create({
     flex: 1,
     textAlign: "center",
   },
+
+  datePickerContainer: {
+    width: 260,
+    margin: 20,
+  },
+
+  datePickerLabel: {
+    fontSize: 18,
+    fontWeight: "bold",
+  },
 });
