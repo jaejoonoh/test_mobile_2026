@@ -16,6 +16,7 @@ import CollectingTextInput from './CollectingTextInput';
 import { Button, Platform } from 'react-native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { createDrawerNavigator } from '@react-navigation/drawer';
+import SelectingOptions from './SelectingOptions';
 
 
 const boxes = new Array(10).fill(null).map((v, i)=> i+1);
@@ -54,6 +55,7 @@ export default function App() {
           <Drawer.Screen name="PlottingOverlays" component={PlottingOverlays} />
           <Drawer.Screen name="WeatherAroundMe" component={WeatherAroundMe} />
           <Drawer.Screen name="CollectingTextInput" component={CollectingTextInput} />
+          <Drawer.Screen name="SelectingOptions" component={SelectingOptions} />
         </Drawer.Navigator>
       )}
     </NavigationContainer>

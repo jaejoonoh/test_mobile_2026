@@ -1,4 +1,7 @@
 import React, { useState } from "react";
+import { View, Text } from "react-native";
+import styles from "./styles";
+import Select from "./Select";
 
 const sizes = [
   { label: "", value: null },
@@ -22,7 +25,38 @@ export default function SelectingOptions() {
     );
     const [selectedSize, setSelectedSize] = useState<string | null>(null);
     const [selectedGarment, setSelectedGarment] = useState<number | null>(null);
-    return (<>
-
-    </>);
+    
+    return (
+    <View style={styles.container}>
+      <View style={styles.pickersBlock}>
+        <Select
+          label="Size"
+          items={sizes}
+          selectedValue={selectedSize}
+          onValueChange={(size) => {
+            setSelectedSize(size as string | null);
+            setSelectedGarment(null);
+            setAvailableGarments(
+              garments.filter((i) => typeof size === "string" && i.sizes.includes(size))
+            );
+          }}
+        />
+        <Select
+          label="Garment"
+          items={availableGarments}
+          selectedValue={selectedGarment}
+          onValueChange={(garment) => {
+            setSelectedGarment(garment as number | null);
+          }}
+        />
+      </View>
+      <Text style={styles.selection}>
+        {selectedSize &&
+          selectedGarment &&
+          `${selectedSize} ${
+            garments.find((i) => i.value === selectedGarment)?.label
+          }`}
+      </Text>
+    </View>
+  );
 }
